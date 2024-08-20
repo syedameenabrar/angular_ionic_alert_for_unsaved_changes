@@ -5,7 +5,11 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },  {
+    path: 'unsaved-changes',
+    loadChildren: () => import('./unsaved-changes/unsaved-changes.module').then( m => m.UnsavedChangesPageModule)
   }
+
 ];
 @NgModule({
   imports: [
